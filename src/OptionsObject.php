@@ -105,9 +105,9 @@ abstract class OptionsObject implements ArrayAccess, JsonSerializable
      *
      * @param array<mixed> $options
      *
-     * @return self
+     * @return static
      */
-    public static function of(array $options): self
+    public static function of(array $options): static
     {
         return (new static)->replace($options);
     }
@@ -115,13 +115,13 @@ abstract class OptionsObject implements ArrayAccess, JsonSerializable
     /**
      * Replace options of this object from given options.
      *
-     * @param array<string, mixed>|OptionsObject $options
+     * @param array<string, mixed>|static $options
      *
-     * @return self
+     * @return static
      */
-    public function replace(self|array $options = []): self
+    public function replace(self|array $options = []): static
     {
-        if ($options instanceof self) {
+        if ($options instanceof static) {
             return $options;
         }
 
