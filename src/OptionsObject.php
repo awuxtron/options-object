@@ -160,4 +160,16 @@ abstract class OptionsObject implements ArrayAccess, JsonSerializable
     {
         return $this->toArray();
     }
+
+    /**
+     * Create a new options object instance from an array of options.
+     *
+     * @param array<mixed> $options
+     *
+     * @return self
+     */
+    protected static function of(array $options): self
+    {
+        return (new static)->replace($options);
+    }
 }
