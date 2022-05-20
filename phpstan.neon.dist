@@ -5,9 +5,7 @@ parameters:
     level: 8
     paths:
         - src
-        - tests
 
     checkTooWideReturnTypesInProtectedAndPublicMethods: true
-    checkUninitializedProperties: true
     checkMissingIterableValueType: true
     reportUnmatchedIgnoredErrors: true
