@@ -1,0 +1,59 @@
+{
+    "name": "awuxtron/options-object",
+    "description": "The Options Object Pattern Implement For PHP.",
+    "type": "library",
+    "homepage": "https://github.com/awuxtron/options-object",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Awuxtron",
+            "email": "awuxtron@gmail.com",
+            "homepage": "https://awuxtron.me",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/awuxtron/options-object/issues",
+        "source": "https://github.com/awuxtron/options-object/releases"
+    },
+    "require": {
+        "symfony/deprecation-contracts": "^3.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "pestphp/pest": "^1.21",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^1.6",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "roave/security-advisories": "dev-latest",
+        "spaze/phpstan-disallowed-calls": "^2.3",
+        "symfony/var-dumper": "^6.0",
+        "thecodingmachine/phpstan-strict-rules": "^1.0",
+        "voku/phpstan-rules": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Awuxtron\\OptionsObject\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Awuxtron\\OptionsObject\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "lint": "vendor/bin/php-cs-fixer fix -v --allow-risky=yes --dry-run",
+        "format": "vendor/bin/php-cs-fixer fix -v --allow-risky=yes",
+        "test": "vendor/bin/pest"
+    }
+}

@@ -1,0 +1,11 @@
+*.cache
+*.lock
+*.log
+.DS_STORE
+.idea
+.vscode
+node_modules
+phpstan.neon
+phpunit.xml
+test.php
+vendor
