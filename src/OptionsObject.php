@@ -101,6 +101,18 @@ abstract class OptionsObject implements ArrayAccess, JsonSerializable
     }
 
     /**
+     * Create a new options object instance from an array of options.
+     *
+     * @param array<mixed> $options
+     *
+     * @return self
+     */
+    public static function of(array $options): self
+    {
+        return (new static)->replace($options);
+    }
+
+    /**
      * Replace options of this object from given options.
      *
      * @param array<string, mixed>|OptionsObject $options
@@ -159,17 +171,5 @@ abstract class OptionsObject implements ArrayAccess, JsonSerializable
     public function jsonSerialize(): array
     {
         return $this->toArray();
-    }
-
-    /**
-     * Create a new options object instance from an array of options.
-     *
-     * @param array<mixed> $options
-     *
-     * @return self
-     */
-    protected static function of(array $options): self
-    {
-        return (new static)->replace($options);
     }
 }
